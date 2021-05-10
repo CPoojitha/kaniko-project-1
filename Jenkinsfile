@@ -95,11 +95,8 @@ INGRESS= "isdc20-0ce42e8480356580312b8efcc5f21aad-0001.us-south.containers.appdo
  
   stages {
     
-<<<<<<< HEAD
-    stage ('Build: Maven') {
-=======
   stage ('Build: Maven') {
->>>>>>> e86f91770d787868845392e172ed5cc829c800c7
+
             steps {
                 withMaven(
                     maven: 'maven-3',

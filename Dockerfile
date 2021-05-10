@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ####
 # This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
 #
@@ -48,17 +48,16 @@ COPY --chown=1001 target/quarkus-app/lib/ /deployments/lib/
 COPY --chown=1001 target/quarkus-app/*.jar /deployments/
 COPY --chown=1001 target/quarkus-app/app/ /deployments/app/
 COPY --chown=1001 target/quarkus-app/quarkus/ /deployments/quarkus/
-=======
+
 FROM adoptopenjdk/openjdk14-openj9:x86_64-alpine-jre-14_36.1_openj9-0.19.0
 RUN apk add curl
->>>>>>> e86f91770d787868845392e172ed5cc829c800c7
 
 ENV QUARKUS_LAUNCH_DEVMODE=true \
     JAVA_ENABLE_DEBUG=true
 
-<<<<<<< HEAD
+
 ENTRYPOINT [ "/deployments/run-java.sh" ]
-=======
+
 COPY target/quarkus-app/lib/ /deployments/lib/
 COPY target/quarkus-app/*.jar /deployments/
 COPY target/quarkus-app/app/ /deployments/app/
@@ -70,4 +69,4 @@ CMD ["java", "-jar", \
   "-Dquarkus.package.type=mutable-jar", \
   "-Dquarkus.live-reload.password=123", \
   "/deployments/quarkus-run.jar"]
->>>>>>> e86f91770d787868845392e172ed5cc829c800c7
+
